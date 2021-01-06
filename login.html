@@ -26,7 +26,7 @@
 				var pass = document.getElementById("password").value;
 				console.log(name+":"+pass);
 				if(name === "admin" && pass === "admin"){
-					location.replace("https://www.w3schools.com");
+					window.location.href = "https://www.w3schools.com";
 				}else {
 					var error = document.getElementById("error");
 					error.innerHTML = "Incorrect credentials";
