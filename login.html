@@ -15,17 +15,32 @@
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 
-		<title>Hello, world!</title>
+		<title>Login page</title>
 	</head>
 	<body>
+		<script>
+			function login(){
+				var name = document.getElementById("username").value;
+				var pass = document.getElementById("password").value;
+				console.log(name+":"+pass);
+				if(name === "admin" && pass === "admin"){
+					location.replace("https://www.w3schools.com");
+				}else {
+					var error = document.getElementById("error");
+					error.innerHTML = "Incorrect credentials";
+					error.setAttribute('style', 'visibility : visible;');
+				}
+			}
+		</script>
 		<div class="login-page">
 			<div class="form">
 				<form class="login-form">
-					<input type="text" placeholder="username" />
-					<input type="password" placeholder="password" />
-					<a href="./index.html" class="btn btn-primary">Login</a>
+					<input type="text" id="username" placeholder="username" />
+					<input type="password" id="password" placeholder="password" />
+					<button class="btn btn-primary" onclick="login()">Login</button>
+					<div id="error">Incorrect credentials.</div>
 				</form>
 			</div>
 		</div>
