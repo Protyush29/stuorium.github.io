@@ -23,12 +23,12 @@
 
 		<div class="login-page">
 			<div class="form">
-				<form class="login-form">
+
 					<input type="text" id="username" placeholder="username" />
 					<input type="password" id="password" placeholder="password" />
-					<button class="btn btn-primary" onclick="login()">Login</button>
-					<div id="error">Incorrect credentials.</div>
-				</form>
+					<button class="btn btn-primary" type="submit" onclick="return login()">Login</button>
+					<div id="error"></div>
+
 			</div>
 		</div>
 
@@ -38,7 +38,7 @@
 				var pass = document.getElementById("password").value;
 				console.log(name+":"+pass);
 				if(name === "admin" && pass === "admin"){
-					window.location.href = "https://www.w3schools.com";
+					window.location.href = "dashboard.html";
 				}else {
 					var error = document.getElementById("error");
 					error.innerHTML = "Incorrect credentials";
