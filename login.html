@@ -20,7 +20,19 @@
 		<title>Login page</title>
 	</head>
 	<body>
-		<script>
+
+		<div class="login-page">
+			<div class="form">
+				<form class="login-form">
+					<input type="text" id="username" placeholder="username" />
+					<input type="password" id="password" placeholder="password" />
+					<button class="btn btn-primary" onclick="login()">Login</button>
+					<div id="error">Incorrect credentials.</div>
+				</form>
+			</div>
+		</div>
+
+	<script>
 			function login(){
 				var name = document.getElementById("username").value;
 				var pass = document.getElementById("password").value;
@@ -34,15 +46,5 @@
 				}
 			}
 		</script>
-		<div class="login-page">
-			<div class="form">
-				<form class="login-form">
-					<input type="text" id="username" placeholder="username" />
-					<input type="password" id="password" placeholder="password" />
-					<button class="btn btn-primary" onclick="login()">Login</button>
-					<div id="error">Incorrect credentials.</div>
-				</form>
-			</div>
-		</div>
 	</body>
 </html>
