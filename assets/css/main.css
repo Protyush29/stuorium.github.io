@@ -3751,6 +3751,33 @@
 				color: rgba(255, 255, 255, 0.65);
 			}
 
+			#header > .search-container {
+			    display: inline-block;
+			    height: inherit;
+			    width: 50%;
+			    left: 25em;
+			    line-height: inherit;
+			    margin: 0;
+			    padding: 0;
+			    position: absolute;
+			    top: 0;
+		    }
+
+		    #header > .search-container button {
+		        left: -9999px;
+		        position: absolute;
+            }
+
+
+		    #header input[type=text] {
+                padding: 6px;
+                margin-top: 8px;
+                font-size: inherit;
+                background: white;
+                border-radius: 20px;
+            }
+
+
 		#header > a {
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
@@ -4360,3 +4387,4 @@
   clear: both;
   display: table;
 }
+

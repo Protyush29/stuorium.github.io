@@ -118,3 +118,7 @@ body {
 #error{
     visibility: hidden;
 }
+
+.search-container {
+  float: right;
+}
